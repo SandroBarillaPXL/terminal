@@ -75,12 +75,54 @@ Type 'help' to see list of available commands.
     }, 500);
     return 'Opening LinkedIn profile...';
   },
-  projects: () => {
-    return `Projects:
+  projects: (args: string[]) => {
+    const usage = `Usage: projects [args].
+    [args]:
+      ls: list all projects
+      [projectname]: open project in new tab
+
+    [Examples]:
+      projects ls
+      projects DevOps`;
+    if (args.length === 0) {
+      return usage;
+    }
+    switch (args[0].toLowerCase()) {
+      case 'ls': {
+      return `Projects:
   - DevOps:     https://github.com/SandroBarillaPXL/expertlab-sprint1-devops
   - Scraper:    https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
   - Jukebox:    https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox
   - Kubernetes: https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes`;
+      }
+      case 'devops': {
+        setTimeout(() => {
+          window.open("https://github.com/SandroBarillaPXL/expertlab-sprint1-devops", '_blank');
+        }, 500);
+        return 'Opening DevOps project...';
+      }
+      case 'scraper': {
+        setTimeout(() => {
+          window.open("https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping", '_blank');
+        }, 500);
+        return 'Opening Scraper project...';
+      }
+      case 'jukebox': {
+        setTimeout(() => {
+          window.open("https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox", '_blank');
+        }, 500);
+        return 'Opening Jukebox project...';
+      }
+      case 'kubernetes': {
+        setTimeout(() => {
+          window.open("https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes", '_blank');
+        }, 500);
+        return 'Opening Kubernetes project...';
+      }
+      default: {
+        return usage;
+      }
+    }
   },
   repo : () => {
     setTimeout(() => {
@@ -102,8 +144,7 @@ Type 'help' to see list of available commands.
 
     [Examples]:
       theme ls
-      theme set gruvboxdark
-    `;
+      theme set gruvboxdark`;
     if (args.length === 0) {
       return usage;
     }
