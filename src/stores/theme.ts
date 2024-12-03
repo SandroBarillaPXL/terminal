@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 import themes from '../../themes.json';
 import type { Theme } from '../interfaces/theme';
 
-const defaultColorscheme: Theme = themes.find((t) => t.name === 'aci')!;
+const defaultColorscheme: Theme = themes.find((t) => t.name === 'Aci')!;
 
 export const theme = writable<Theme>(
   JSON.parse(
