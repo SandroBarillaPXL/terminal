@@ -7,8 +7,12 @@
 
   let command = '';
   let historyIndex = -1;
-
   let input: HTMLInputElement;
+
+  let isValidCommand = false;
+
+  // Reactive statement to validate the command
+  $: isValidCommand = commands.hasOwnProperty(command.split(' ')[0]);
 
   onMount(() => {
     input.focus();
@@ -45,7 +49,7 @@
           $history = [...$history, { command, outputs: [output] }];
         }
       } else {
-        const output = `${commandName}: command not found`;
+        const output = `${commandName}: command not found. Try 'help' to get started.`;
 
         $history = [...$history, { command, outputs: [output] }];
       }
@@ -82,6 +86,19 @@
       event.preventDefault();
 
       $history = [];
+    } else if (event.ctrlKey && event.key === 'c') {
+      event.preventDefault();
+      // Mimic the CTRL+C behavior
+      if (command.trim()) {
+        // Add the current command to history as "interrupted"
+        $history = [
+          ...$history,
+          { command, outputs: ['^C'] }
+        ];
+      }
+
+      // Reset the current command
+      command = '';
     }
   };
 </script>
@@ -101,7 +118,7 @@
     aria-label="Command input"
     class="w-full px-2 bg-transparent outline-none"
     type="text"
-    style={`color: ${$theme.foreground}`}
+    style={`color: ${isValidCommand ? $theme.green : 'red'}`}
     bind:value={command}
     on:keydown={handleKeyDown}
     bind:this={input}
