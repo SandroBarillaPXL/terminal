@@ -151,7 +151,7 @@ Type 'help' to see list of available commands.
     switch (args[0]) {
       case 'ls': {
         let result = themes.map((t) => t.name.toLowerCase()).join(', ');
-        result += `You can preview all these themes here: ${packageJson.repository.url}/tree/master/docs/themes`;     
+        result += `\n\nYou can preview all these themes here: ${packageJson.repository.url}/tree/master/docs/themes`;     
         return result;
       }
       case 'set': {
