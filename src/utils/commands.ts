@@ -5,14 +5,22 @@ import { theme } from '../stores/theme';
 
 const hostname = window.location.hostname;
 
+const birthDate = new Date(2001, 5, 15); // Adjust the month and day as needed
+const currentDate = new Date();
+const ageInMilliseconds = currentDate.getTime() - birthDate.getTime();
+const ageInDays = ageInMilliseconds / (1000 * 60 * 60 * 24);
+const ageInYears = Math.floor(ageInDays / 365.25); // Account for leap years
+
+const age = ageInYears;
+
 export const commands: Record<string, (args: string[]) => Promise<string> | string> = {
   about : () => `
 +------------------------------------------------------+
 |                   Sandro Barilla                     |
 |------------------------------------------------------|
-| 📕  23-year-old Multimedia student                   |
+| 📕  ${age}-year-old Multimedia student               |
 | 🌍  From Hasselt, studying at Erasmushogeschool      |
-|      Brussel                                         |
+|      Brussel, graduating in 2025                     |
 | 🎓  Graduated in Applied Computer Science at        |
 |      Hogeschool PXL Hasselt in 2022                  |
 | 💻  Passionate about:                                |
