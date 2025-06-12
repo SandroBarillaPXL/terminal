@@ -57,6 +57,7 @@ Type 'help' to see list of available commands.
       return `curl: could not fetch URL ${url}. Details: ${error}`;
     }
   },
+  cv: () => return 'Coming soon!',
   date: () => new Date().toLocaleString(),
   echo: (args: string[]) => args.join(' '),
   emacs: () => `why use emacs? try 'vim'`, 
@@ -98,10 +99,17 @@ Type 'help' to see list of available commands.
     switch (args[0].toLowerCase()) {
       case 'ls': {
       return `Projects:
+  - Music Deck: https://github.com/SandroBarillaPXL/musicdeck
   - DevOps:     https://github.com/SandroBarillaPXL/expertlab-sprint1-devops
   - Scraper:    https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
   - Jukebox:    https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox
   - Kubernetes: https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes`;
+      }
+      case 'music deck': {
+        setTimeout(() => {
+          window.open("https://github.com/SandroBarillaPXL/musicdeck", '_blank');
+        }, 500);
+        return 'Opening DevOps project...';
       }
       case 'devops': {
         setTimeout(() => {
