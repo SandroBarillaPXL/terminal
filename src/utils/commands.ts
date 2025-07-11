@@ -5,7 +5,7 @@ import { theme } from '../stores/theme';
 
 const hostname = window.location.hostname;
 
-const birthDate = new Date(2001, 5, 15); // Adjust the month and day as needed
+const birthDate = new Date(2001, 4, 15); // Month is 0-based
 const currentDate = new Date();
 const ageInMilliseconds = currentDate.getTime() - birthDate.getTime();
 const ageInDays = ageInMilliseconds / (1000 * 60 * 60 * 24);
@@ -18,11 +18,11 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 +------------------------------------------------------+
 |                   Sandro Barilla                     |
 |------------------------------------------------------|
-| 📕  ${age}-year-old Multimedia student               |
-| 🌍  From Hasselt, studying at Erasmushogeschool      |
-|      Brussel, graduating in 2025                     |
-| 🎓  Graduated in Applied Computer Science at        |
-|      Hogeschool PXL Hasselt in 2022                  |
+| 🌍  ${age}-year-old IT-enthousiast from Hasselt      |
+| 🎓  Graduated in Multimedia & Creative Technology at |
+|      Erasmushogeschool Brussel in 2025               |
+| 🎓  Graduated in Applied Computer Science at         |
+|      Hogeschool PXL Hasselt in 2023                  |
 | 💻  Passionate about:                                |
 |       • Cloud                                        |
 |       • Automation                                   |
@@ -36,7 +36,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 ███████╗███████║██╔██╗ ██║██║  ██║██████╔╝██║   ██║
 ╚════██║██╔══██║██║╚██╗██║██║  ██║██╔══██╗██║   ██║
 ███████║██║  ██║██║ ╚████║██████╔╝██║  ██║╚██████╔╝
-╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.0
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.2
 
 Type 'help' to see list of available commands.
 `,
@@ -57,7 +57,12 @@ Type 'help' to see list of available commands.
       return `curl: could not fetch URL ${url}. Details: ${error}`;
     }
   },
-  cv: () => return 'Coming soon!',
+  cv: () => {
+    setTimeout(() => {    
+      window.open("https://giulio.barilladigital.dev/api/public/dl/zBbEULZG?inline=true", '_blank');
+    }, 500);
+    return 'Opening CV...';
+  },
   date: () => new Date().toLocaleString(),
   echo: (args: string[]) => args.join(' '),
   emacs: () => `why use emacs? try 'vim'`, 
@@ -99,17 +104,17 @@ Type 'help' to see list of available commands.
     switch (args[0].toLowerCase()) {
       case 'ls': {
       return `Projects:
-  - Music Deck: https://github.com/SandroBarillaPXL/musicdeck
-  - DevOps:     https://github.com/SandroBarillaPXL/expertlab-sprint1-devops
-  - Scraper:    https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
-  - Jukebox:    https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox
-  - Kubernetes: https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes`;
+  - musicdeck: https://github.com/SandroBarillaPXL/musicdeck
+  - devops:     https://github.com/SandroBarillaPXL/expertlab-sprint1-devops
+  - webscraper:    https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
+  - jukebox:    https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox
+  - kubernetes: https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes`;
       }
-      case 'music deck': {
+      case 'musicdeck': {
         setTimeout(() => {
           window.open("https://github.com/SandroBarillaPXL/musicdeck", '_blank');
         }, 500);
-        return 'Opening DevOps project...';
+        return 'Opening Music Deck project...';
       }
       case 'devops': {
         setTimeout(() => {
@@ -117,7 +122,7 @@ Type 'help' to see list of available commands.
         }, 500);
         return 'Opening DevOps project...';
       }
-      case 'scraper': {
+      case 'webscraper': {
         setTimeout(() => {
           window.open("https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping", '_blank');
         }, 500);
