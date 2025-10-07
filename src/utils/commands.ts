@@ -59,7 +59,7 @@ Type 'help' to see list of available commands.
   },
   cv: () => {
     setTimeout(() => {    
-      window.open("https://giulio.barilladigital.dev/api/public/dl/XkNDMe4G?inline=true", '_blank');
+      window.open("https://giulio.barilladigital.dev/api/public/dl/FC4ueHJ5?inline=true", '_blank');
     }, 500);
     return 'Opening CV...';
   },
