@@ -26,7 +26,8 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 | 💻  Passionate about:                                |
 |       • Cloud                                        |
 |       • Automation                                   |
-|       • Kubernetes                                   |
+|       • Kubernetes, Docker                           |
+|       • DevOps                                       |
 |       • IT as a whole                                |
 +------------------------------------------------------+
 `, 
@@ -59,7 +60,7 @@ Type 'help' to see list of available commands.
   },
   cv: () => {
     setTimeout(() => {    
-      window.open("https://giulio.barilladigital.dev/api/public/dl/FC4ueHJ5?inline=true", '_blank');
+      window.open("https://piero.barilladigital.dev/api/public/dl/FC4ueHJ5?inline=true", '_blank');
     }, 500);
     return 'Opening CV...';
   },
@@ -70,7 +71,7 @@ Type 'help' to see list of available commands.
     setTimeout(() => {
       window.open("mailto:sandrobarilla2001@gmail.com", '_blank');
     }, 500);
-    return "Opening mailto:sandrobarilla2001@gmail.com ..";
+    return "Opening mailto:sandrobarilla2001@gmail.com...";
   },
   exit: () => {
     return 'Please close the tab to exit.';
@@ -104,9 +105,9 @@ Type 'help' to see list of available commands.
     switch (args[0].toLowerCase()) {
       case 'ls': {
       return `Projects:
-  - musicdeck: https://github.com/SandroBarillaPXL/musicdeck
+  - musicdeck:  https://github.com/SandroBarillaPXL/musicdeck
   - devops:     https://github.com/SandroBarillaPXL/expertlab-sprint1-devops
-  - webscraper:    https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
+  - webscraper: https://github.com/SandroBarillaPXL/expertlab-sprint2-scraping
   - jukebox:    https://github.com/SandroBarillaPXL/expertlab-sprint3-jukebox
   - kubernetes: https://github.com/SandroBarillaPXL/expertlab-sprint4-kubernetes`;
       }
