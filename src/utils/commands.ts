@@ -18,15 +18,17 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 +------------------------------------------------------+
 |                   Sandro Barilla                     |
 |------------------------------------------------------|
-| 🌍  ${age}-year-old IT-enthousiast from Hasselt      |
+| 🌍  ${age}-year-old IT-enthousiast from Hasselt          |
+| 💼  Business Systems Support Specialist at           |
+|      SKF Logistics Services Tongeren                 |
 | 🎓  Graduated in Multimedia & Creative Technology at |
 |      Erasmushogeschool Brussel in 2025               |
-| 🎓  Graduated in Applied Computer Science at         |
+| 🎓  Graduated in Applied Computer Science at        |
 |      Hogeschool PXL Hasselt in 2023                  |
-| 💻  Passionate about:                                |
+| 💻  Passionate about:                               |
 |       • Cloud                                        |
 |       • Automation                                   |
-|       • Kubernetes, Docker                           |
+|       • Kubernetes, containers                       |
 |       • DevOps                                       |
 |       • IT as a whole                                |
 +------------------------------------------------------+
@@ -37,7 +39,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 ███████╗███████║██╔██╗ ██║██║  ██║██████╔╝██║   ██║
 ╚════██║██╔══██║██║╚██╗██║██║  ██║██╔══██╗██║   ██║
 ███████║██║  ██║██║ ╚████║██████╔╝██║  ██║╚██████╔╝
-╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.2
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.5
 
 Type 'help' to see list of available commands.
 `,
