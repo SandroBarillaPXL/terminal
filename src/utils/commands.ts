@@ -20,7 +20,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 |------------------------------------------------------|
 | 🌍  ${age}-year-old IT-enthousiast from Hasselt          |
 | 💼  Business Systems Support Specialist at           |
-|      SKF Logistics Services Tongeren                 |
+|      SKF Vertevo Belgium Logistics                   |
 | 🎓  Graduated in Multimedia & Creative Technology at |
 |      Erasmushogeschool Brussel in 2025               |
 | 🎓  Graduated in Applied Computer Science at        |
@@ -39,7 +39,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 ███████╗███████║██╔██╗ ██║██║  ██║██████╔╝██║   ██║
 ╚════██║██╔══██║██║╚██╗██║██║  ██║██╔══██╗██║   ██║
 ███████║██║  ██║██║ ╚████║██████╔╝██║  ██║╚██████╔╝
-╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.5
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.6
 
 Type 'help' to see list of available commands.
 `,
