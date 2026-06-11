@@ -30,7 +30,8 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 |       • Automation                                   |
 |       • Kubernetes, containers                       |
 |       • DevOps                                       |
-|       • IT as a whole                                |
+|       • Consumer electronics                         |
+|       • Self-hosting (obviously)                     |
 +------------------------------------------------------+
 `, 
   banner: () => `
@@ -39,7 +40,7 @@ export const commands: Record<string, (args: string[]) => Promise<string> | stri
 ███████╗███████║██╔██╗ ██║██║  ██║██████╔╝██║   ██║
 ╚════██║██╔══██║██║╚██╗██║██║  ██║██╔══██╗██║   ██║
 ███████║██║  ██║██║ ╚████║██████╔╝██║  ██║╚██████╔╝
-╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.6
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝  v1.7
 
 Type 'help' to see list of available commands.
 `,
